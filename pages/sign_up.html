@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UWeb - Регистрация</title>
+
+    <link rel="icon" href="../img/logo.svg">
+
+    <link rel="stylesheet" href="../bootstrap-5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+    <header class="pt-md-4 pt-1">
+        <div class="container d-flex align-items-center">
+            <nav class="navbar navbar-light navbar-expand-md w-100">
+                <div class="navbar-brand logo me-5">
+                    <img src="../img/logo.svg">
+                </div>
+                <button class="navbar-toggler collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#toggleNavbar" aria-controls="toggleNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse w-100" id="toggleNavbar">
+                    <ul class="navbar-nav mt-md-0 mt-2 mb-md-0 mb-2">
+                        <div class="nav-item">
+                            <a class="nav-link" href="../index.html">главная</a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="nav-link" href="#">блог</a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="nav-link" href="#">форум</a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="nav-link" href="#">обучение</a>
+                        </div>
+                    </ul>
+                    <div class="profile ms-auto">
+                        <a class="enter btn btn-link d-block d-md-inline mb-1" href="sign_in.html">вход</a>
+                        <a class="reg btn btn-primary d-block d-md-inline" href="">регистрация</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <form action="projects.html" class="m-auto first-screen mt-5 needs-validation" style="width: 405px;"
+        oninput='pass2.setCustomValidity(pass2.value != pass.value ? "Пароли должны совпадать" : "")'>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Почта</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Пароль</label>
+            <input name="pass" type="password" pattern=".{6,}" title="минимум 6 символов" placeholder="минимум 6 символов" class="form-control" id="exampleInputEmail1" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Подвердите пароль</label>
+            <input name="pass2" type="password" class="form-control" id="exampleInputEmail1" required>
+        </div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="SaveMe" required>
+            <label class="form-check-label" for="SaveMe">я принимаю <a href="#">Пользовательские соглашения</a></label>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Войти</button>
+
+        <div class="invalid-feedback">
+            Заполните все поля
+        </div>
+    </form>
+
+
+    <script src="../bootstrap-5/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

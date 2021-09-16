@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UWeb - конструктор</title>
+
+    <link rel="icon" href="../img/logo.svg">
+
+    <link rel="stylesheet" href="../bootstrap-5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="constructor.css">
+</head>
+<body>
+   
+    <div id="app" class="d-flex">
+        <div id="panelWrapper" style="min-width: 250px;">
+            <div id="panel" class="position-fixed p-4 pe-3 mh-100 w-100" style="max-width: 250px; overflow-y: auto;">
+                <button id="addBlockButton" type="button" class="btn btn-primary mb-3 w-100" data-bs-toggle="modal" data-bs-target="#addBlock-Modal">добавить элемент</button>
+                <button id="removeBlockButton" type="button" class="btn btn-danger mb-3 w-100">удалить элемент</button>
+                <form id='autocreatepanel' class="w-100 position-relative"></form>
+            </div>
+        </div>
+        <div id="site" class="w-100 min-vh-100 m-4 ms-2 shadow"></div>
+    </div>
+
+
+    <div id="modals">
+        <div class="modal fade" id="addBlock-Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Выбери элемент</h5>
+                  <button id="closeBtn-elements" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <span class="element" data-class="TextBlock" data-tag="span" data-content="текст">текст</span>
+                  <span class="element" data-class="TextBlock" data-tag="p" data-content="абзац">абзац</span>
+                  <span class="element" data-class="TextBlock" data-tag="h1" data-content="абзац">заголовок h1</span>
+                  <span class="element" data-class="TextBlock" data-tag="h2" data-content="абзац">заголовок h2</span>
+                  <span class="element" data-class="LinkBlock" data-href="https://www.google.com" data-content="ссылка">Ссылка</span>
+                  <span class="element" data-class="BoxBlock" data-styles="background: yellow; padding: 25px">
+                      пустой блок
+                      <span class="" data-class="TextBlock" data-tag="h2" data-content="абзац"></span>
+                  </span>
+                    <span class="element" data-class="BoxBlock" data-styles="background: #111111; display: flex; align-items: center">
+                        navbar
+                        <span class="" data-class="TextBlock" data-tag="h2" data-content="Имя" data-styles="margin: 0 0 0 20px; color: #ffffff"></span>
+                        <span class="" data-class="BoxBlock" data-styles="padding: 3px; margin: 0 0 0 20px; display: inline-block; display: flex;">
+                            <span class="" data-class="TextBlock" data-tag="a" data-content="ссылка-1" data-styles="color: #ffffff; padding: 10px 10px 10px 10px;"></span>
+                            <span class="" data-class="TextBlock" data-tag="a" data-content="ссылка-2" data-styles="color: #ffffff; padding: 10px 10px 10px 10px"></span>
+                            <span class="" data-class="TextBlock" data-tag="a" data-content="ссылка-3" data-styles="color: #ffffff; padding: 10px 10px 10px 10px"></span>
+                            <span class="" data-class="TextBlock" data-tag="a" data-content="ссылка-4" data-styles="color: #ffffff; padding: 10px 10px 10px 10px"></span>
+                        </span>
+
+                        <span class="" data-class="TextBlock" data-styles="padding: 3px 3px 3px 3px; margin: 0 20px 0 auto; color: #ffffff" data-content="Профиль"></span>
+                    </span>
+
+                    <span class="element" data-class="BoxBlock" data-styles="display: flex; align-items: flex-start">
+                        side bar
+                        <span class="" data-class="BoxBlock" data-styles="display: flex; flex-direction: column; padding: 10px 10px 10px 10px; margin: 20px 20px 20px 20px; width: 200px; border-radius: 10px; box-shadow: 0 0 10px 0 gray; color: #000000">
+                            <span class="" data-class="TextBlock" data-tag="a" data-content="ссылка-1" data-styles="padding: 10px 10px 10px 10px;"></span>
+                            <span class="" data-class="TextBlock" data-tag="a" data-content="ссылка-2" data-styles="padding: 10px 10px 10px 10px"></span>
+                            <span class="" data-class="TextBlock" data-tag="a" data-content="ссылка-3" data-styles="padding: 10px 10px 10px 10px"></span>
+                            <span class="" data-class="TextBlock" data-tag="a" data-content="ссылка-4" data-styles="padding: 10px 10px 10px 10px"></span>
+                        </span>
+                    </span>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../bootstrap-5/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="./js/constructor.js"></script>
+</body>
+</html>

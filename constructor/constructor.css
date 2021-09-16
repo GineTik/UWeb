@@ -1,0 +1,68 @@
+html, body, #app, #panel, #site {
+    height: 100%;
+}
+#site > div *:hover {
+    cursor: pointer;
+    outline: 1px solid orange !important;
+}
+.element {
+    padding-right: 10px;
+    padding-left: 10px;
+    border-left: 1px solid;
+    cursor: pointer;
+}
+.element:last-child {
+    border-right: 1px solid;
+}
+
+
+/* FORMS ELEMENTS */
+.style-element {
+    border-top: 1px solid lightgray;
+
+    padding: 20px 0;
+}
+.style-element:last-child {
+    border-bottom: 1px solid lightgray;
+
+    padding: 20px 0;
+}
+
+.present-color {
+    width: 30px;
+    height: 20px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.border-standart {
+    border: 1px solid transparent;
+    border-radius: 3px;
+
+    transition: .2s;
+}
+.border-standart * {
+    margin: 4px;
+    padding: 0;
+}
+.border-standart:hover {
+    border: 1px solid lightgray;
+}
+.border-standart:focus {
+    border: 1px solid lightgray;
+}
+
+.form-control {
+    width: 24%;
+    box-shadow: none !important;
+}
+.form-control-sm {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.btn {
+    border-radius: 10px;
+}

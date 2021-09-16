@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru" class="h-100">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UWeb - конструкстор</title>
+
+    <link rel="icon" href="../img/logo.svg">
+
+    <link rel="stylesheet" href="../bootstrap-5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/default.css">
+</head>
+<body class="h-100 d-flex">
+
+    <div class="d-sm-none d-block position-fixed w-100 h-100 bg-dark text-white fs-bold d-flex justify-content-center align-items-center">
+        такое расширение не поддержываеться
+    </div>
+
+
+    <div class="side h-100" id="left-side-menu">
+        <header class="p-3 h-100" style="width: 280px;" id="toggleNavbar">
+            <div class="d-flex align-items-center flex-column h-100" id="navbar">
+                <button id="to-side" class="align-self-end btn btn-link py-0 px-2 shadow-none">вправо</button>
+                <div class="mt-4 mb-4">
+                  <img src="../img/logo.svg">
+                </div>
+                <ul class="nav align-items-center flex-column mb-auto">
+                  <li class="nav-item">
+                    <a href="../index.html" class="nav-link link-dark">
+                      Главная
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link link-dark">
+                      Блог
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link link-dark">
+                      Форум
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link link-dark">
+                      Обучение
+                    </a>
+                  </li>
+                </ul>
+                <a href="projects.html" class="btn btn-link w-100 mb-2 shadow-none">к проектам</a>
+                <a href="#" class="btn btn-primary w-100">сохранить</a>
+                <button href="#" class="btn btn-secondary mt-2 w-100" data-bs-toggle="modal" data-bs-target="#addElement">добавить элемент</button>
+            </div>
+        <div id="editor" class="d-none h-100 position-relative">
+          <button class="back-navbar btn p-2 ps-0 link-primary mb-3">назад</button>
+
+				<div class="buttons pb-4">
+					<button class="btn btn-primary w-100 mb-2" onclick="saveEdit()">
+						Применить
+					</button>
+					<button class="btn btn-danger w-100" onclick="deleteElem()">
+						Удалить
+					</button>
+				</div>
+
+				<input type="hidden" name="elementHidden" id="elementHidden">
+				<div class="form-group mb-3">
+					<h4 class="h6 text-black">width</h4>
+					<input class="form-control px-3 py-1" type="text" name="width" id="width">
+				  </div>
+				  <div class="form-group mb-3">
+					<h4 class="h6 text-black">height</h4>
+					<input class="form-control px-3 py-1" type="text" name="height" id="height">
+				  </div>
+                <div class="form-group mb-3">
+                  <h4 class="h6 text-black">background</h4>
+                  <input class="form-control px-3 py-1" type="text" name="background" id="background">
+                </div>
+                <div class="form-group mb-3">
+                  <h4 class="h6 text-black">text color</h4>
+                  <input class="form-control px-3 py-1" type="text" name="color" id="color">
+                </div>
+                <div class="form-group mb-3">
+                  <h4 class="h6 text-black">border</h4>
+                  <input class="form-control px-3 py-1" type="text" name="border" id="border">
+                </div>
+                <div class="form-group">
+                  <h4 class="h6 text-black">inner HTML</h4>
+                  <textarea class="form-control px-3 py-1" type="text" name="innerHTML" id="innerHTML" style="height: 200px;"></textarea>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div class="content w-100">
+        <iframe id="page" src="page.html" frameborder="0" class="w-100 h-100"></iframe>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="addElement" tabindex="-1" aria-hidden="true">
+      	<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<button class="element" data-tag="a" data-href="#">
+						ссылка
+					</button>
+					<button class="element" data-tag="p">
+						абзац
+					</button>
+					<button class="element" data-tag="h1">
+						заголовок
+					</button>
+					<button class="element">
+						свой тег текста
+					</button>
+					<button class="element">
+						пустой блок
+					</button>
+					<button class="element">
+						изображение
+					</button>
+				</div>
+			</div>
+      	</div>
+    </div>
+
+
+    <script src="../bootstrap-5/js/bootstrap.bundle.min.js"></script>
+	<script type="module" src="js/constructor.js"></script>
+    <script>
+
+        document.getElementById("to-side").onclick = function(e) {
+            e.preventDefault();
+
+            document.querySelector("body").classList.toggle("flex-row-reverse");
+            this.classList.toggle("align-self-end");
+            this.classList.toggle("align-self-start");
+            if (document.querySelector("body").classList.contains("flex-row-reverse")) {
+                this.textContent = "влево";
+            }
+            else {
+                this.textContent = "вправо";
+            }
+        }
+
+		document.querySelector(".back-navbar").onclick = function() {
+        	document.getElementById("navbar").classList.remove("d-none");
+        	document.getElementById("editor").classList.add("d-none");
+        }
+
+		function saveEdit() {
+			var classList = document.getElementById("elementHidden").value;
+			var elem = window.frames[0].document.getElementsByClassName(classList);
+
+			elem[0].style.setProperty("background-color", document.getElementById("background").value, "important");
+			elem[0].style.setProperty("color", document.getElementById("color").value, "important");
+			elem[0].style.setProperty("border", document.getElementById("border").value, "important");
+			elem[0].innerHTML = document.getElementById("innerHTML").value;
+			elem[0].style.setProperty("width", document.getElementById("width").value, "important");
+			elem[0].style.setProperty("height", document.getElementById("height").value, "important");
+		}
+
+		function deleteElem() {
+			var classList = document.getElementById("elementHidden").value;
+			var elem = window.frames[0].document.getElementsByClassName(classList);
+			elem[0].remove();
+			document.getElementById("navbar").classList.remove("d-none");
+      		document.getElementById("editor").classList.add("d-none");
+		}
+    </script>
+</body>
+</html>

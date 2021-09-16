@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UWeb - Проекты</title>
+
+    <link rel="icon" href="../img/logo.svg">
+
+    <link rel="stylesheet" href="../bootstrap-5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+    <header class="pt-md-4 pt-1">
+        <div class="container d-flex align-items-center">
+            <nav class="navbar navbar-light navbar-expand-md w-100">
+                <div class="navbar-brand logo me-5">
+                    <img src="../img/logo.svg">
+                </div>
+                <button class="navbar-toggler collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#toggleNavbar" aria-controls="toggleNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse w-100" id="toggleNavbar">
+                    <ul class="navbar-nav mt-md-0 mt-2 mb-md-0 mb-2">
+                        <div class="nav-item">
+                            <a class="nav-link" href="../index.html">главная</a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="nav-link" href="#">блог</a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="nav-link" href="#">форум</a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="nav-link" href="#">обучение</a>
+                        </div>
+                    </ul>
+                    <div class="profile ms-auto">
+                        <a class="enter btn btn-link d-block d-md-inline mb-1" href="sign_in.html">вход</a>
+                        <a class="reg btn btn-primary d-block d-md-inline" href="sign_up.html">регистрация</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <main class="container py-5">
+        <h2>Проекты</h2>
+        <div class="projects mt-3">
+            <a href="../constructor/constructor.html" class="card d-inline-block p-3 btn-link">
+                <div class="card-title m-0">Имя проекта 1</div>
+            </a>
+            <button id="new-page" class="card d-inline-block p-3 btn-link border-primary border-2">
+                <div class="fw-normal">создать</div>
+            </button>
+        </div>
+    </main>
+
+
+    <script src="../bootstrap-5/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById("new-page").onclick = function(e) {
+            e.preventDefault();
+
+            
+        }
+    </script>
+</body>
+</html>
