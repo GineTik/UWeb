@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ua">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,51 +12,60 @@
     <link rel="stylesheet" href="css/default.css">
 </head>
 <body>
+
+    <!-- HEADER -->
     <header class="pt-md-4 pt-1">
         <div class="container d-flex align-items-center">
             <nav class="navbar navbar-light navbar-expand-md w-100">
                 <div class="navbar-brand logo me-5">
-                    <img src="img/logo.svg">
+                    <!-- LOGO -->
+                    <img src="img/logo.svg"> 
                 </div>
+                <!-- BUTTON MENU FOR SMARTPHONE -->
                 <button class="navbar-toggler collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#toggleNavbar" aria-controls="toggleNavbar" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <!-- NAVBAR -->
                 <div class="navbar-collapse collapse w-100" id="toggleNavbar">
                     <ul class="navbar-nav mt-md-0 mt-2 mb-md-0 mb-2">
                         <div class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="">главная</a>
+                            <!-- SELECT ITEM -->
+                            <a class="nav-link active" aria-current="page" href="">головна</a>
                         </div>
                         <div class="nav-item">
-                            <a class="nav-link" href="#">блог</a>
+                            <a class="nav-link" href="pages/blog.html">блог</a>
                         </div>
                         <div class="nav-item">
-                            <a class="nav-link" href="#">форум</a>
+                            <a class="nav-link" href="pages/forum.html">форум</a>
                         </div>
                         <div class="nav-item">
-                            <a class="nav-link" href="#">обучение</a>
+                            <a class="nav-link" href="pages/lessons.html">навчання</a>
                         </div>
                     </ul>
+                    <!-- BUTTONS SIGN IN AND SIGN UP -->
                     <div class="profile ms-auto">
-                        <a class="enter btn btn-link d-block d-md-inline mb-1" href="pages/sign_in.html">вход</a>
-                        <a class="reg btn btn-primary d-block d-md-inline" href="pages/sign_up.html">регистрация</a>
+                        <a class="enter btn btn-link d-block d-md-inline mb-1" href="pages/sign_in.html">вхід</a>
+                        <a class="reg btn btn-primary d-block d-md-inline" href="pages/sign_up.html">реєстрація</a>
                     </div>
                 </div>
             </nav>
         </div>
     </header>
+    <!-- HEADER -->
 
 
-
+    <!-- MAIN -->
     <main class="container">
 
+        <!-- FIRST SCREEN -->
         <section class="first-screen pt-4">
             <div class="row">
                 <div class="col-xl-7 col-lg-9 col-11 box d-flex justify-content-center flex-column align-items-start">
-                    <h1>Быстрый конструктор сайтов для каждого</h1>
-                    <p class="fs-4">Создайте быстрый и эффективный сайт для вас или вашего бизнеса!</p>
+                    <h1>Швидкий конструктор сайтів для кожного</h1>
+                    <p class="fs-4">Створіть швидкий та ефективний сайт для вас або вашого бізнесу!</p>
                     <div class="d-flex">
-                        <a href="pages/projects.html" class="btn btn-secondary">создать сайт</a>
-                        <a href="pages/donate.html" class="btn btn-link ms-1">задонатить</a>
+                        <a href="pages/projects.html" class="btn btn-secondary">створити сайт</a>
+                        <a href="pages/donate.html" class="btn btn-link ms-1">задонатіть</a>
                     </div>
                 </div>
                 <div class="col-xl-5 col-lg-3 col-1 d-flex justify-content-end d-none d-md-flex">
@@ -64,15 +73,16 @@
                 </div>
             </div>
         </section>
+        <!-- FIRST SCREEN -->
 
 
-
+        <!-- SECOND SCREEN -->
         <section class="why-we">
-            <h1 class="text-center">Почему именно мы?</h1>
+            <h1 class="text-center">Чому саме ми?</h1>
             <div class="row justify-content-center mb-4">
                 <div class="col-xl-3 col-md-4 col-sm-5 col-8 mb-md-0 mb-4 pe-4 mini-card">
                     <img src="img/p1.png">
-                    <h2>Бесплатно</h2>
+                    <h2>Бескоштовно</h2>
                     <p>создать сайт у нас можно 
                         полностю бесплатно
                         мы хотим дать возможность 
@@ -89,7 +99,7 @@
                 </div>
                 <div class="col-xl-3 col-md-4 col-sm-5 col-8 mini-card">
                     <img src="img/p3.png">
-                    <h2>Удобно</h2>
+                    <h2>Зручно</h2>
                     <p>мы потратили много времени 
                         что бы ты почуствовал 
                         комфорт в процесе
@@ -98,10 +108,12 @@
             </div>
             <a href="pages/projects.html" class="btn btn-primary mx-auto">создать сайт</a>
         </section>
+        <!-- SECOND SCREEN -->
 
 
+        <!-- THIRD SCREEN -->
         <section class="qustions container box">
-            <h1 class="text-center mb-5 pb-5">Часто задаваемые вопросы</h1>
+            <h1 class="text-center mb-5 pb-5">Часто задавані питання</h1>
             <div class="row">
                 <div class="col">
                     <h2>Как создать свой сайт бесплатно?</h2>
@@ -211,10 +223,13 @@
                 </div>
             </div>
         </section>
+        <!-- THIRD SCREEN -->
     </main>
+    <!-- MAIN -->
 
 
 
+    <!-- FOOTER -->
     <footer class="bg-primary pt-5 pb-3">
         <div class="container">
             <div class="row">
@@ -227,13 +242,13 @@
                     </div>
                 </div>
                 <div class="col d-flex align-items-center justify-content-md-end justify-content-center">
-                    <a href="pages/projects.html" class="btn btn-secondary">создать сайт</a>
-                    <a href="pages/donate.html" class="btn btn-link ms-1">задонатить</a>
+                    <a href="pages/projects.html" class="btn btn-secondary">створити сайт</a>
+                    <a href="pages/donate.html" class="btn btn-link ms-1">задонатіть</a>
                 </div>
             </div>
             <div class="row my-5">
                 <div class="col-md col-6 mb-md-0 mb-4 d-flex flex-column">
-                    <h2>Следите за нами</h2>
+                    <h3>Слудкуйте за нами</h3>
                     <a href="#">facebook</a>
                     <a href="#">twitter</a>
                     <a href="#">instagram</a>
@@ -241,45 +256,47 @@
                     <a href="#">lined in</a>
                 </div>
                 <div class="col-md col-6 mb-md-0 mb-4 d-flex flex-column">
-                    <h2>Обучение</h2>
+                    <h3>Навчення</h3>
                     <a href="#">старт</a>
-                    <a href="#">базовые знания</a>
-                    <a href="#">средний уровень</a>
-                    <a href="#">продвинутый</a>
-                    <a href="#">полностю профи</a>
+                    <a href="#">базові знання</a>
+                    <a href="#">середній равень</a>
+                    <a href="#">продвинутий</a>
+                    <a href="#">повністю профі</a>
                 </div>
                 <div class="col-md col-6 d-flex flex-column">
-                    <h2>Блог</h2>
+                    <h3>Блог</h3>
                     <a href="#">про нас</a>
-                    <a href="#">все статьи</a>
-                    <a href="#">самая последняя</a>
+                    <a href="#">все статі</a>
+                    <a href="#">сама остання</a>
                 </div>
                 <div class="col-md col-6 d-flex flex-column">
-                    <h2>Форум</h2>
-                    <a href="#">на главную форума</a>
-                    <a href="#">написать статью</a>
-                    <a href="#">перейти в свой профиль</a>
+                    <h3>Форум</h3>
+                    <a href="#">на головну форума</a>
+                    <a href="#">написати статю</a>
+                    <a href="#">перейти в свій профіль</a>
                 </div>
                 <div class="col-md col-12 mt-md-0 mt-4 d-flex flex-column">
-                    <h2>Внешние ссылки</h2>
+                    <h3>Зовнішні силка</h3>
                     <a href="https://www.freepik.com/vectors/illustrations">freepik</a>
-                    <a href="#">ссылка 2</a>
-                    <a href="#">ссылка 3</a>
+                    <a href="#">силка 2</a>
+                    <a href="#">силка 3</a>
                 </div>
             </div>
 
             <hr>
 
             <div class="d-flex flex-md-row flex-column justify-content-between">
-                <span class="text-center">сайт создан на конструкторе <b>UWeb</b></span>
-                <span class="text-md-end text-center mt-md-0 mt-2">Copyright © 2021 Все права защищены<br>
+                <span class="text-center">сайт створений на конструкторі <b>UWeb</b></span>
+                <span class="text-md-end text-center mt-md-0 mt-2">Copyright © 2021 Усі права захищені<br>
                     Managed by Web Depot FZE LLC.</span>
             </div>
         </div>
     </footer>
+    <!-- FOOTER -->
 
 
-
+    <!-- JS SCRIPTS -->
     <script src="bootstrap-5/js/bootstrap.bundle.min.js"></script>
+    <!-- JS SCRIPTS -->
 </body>
 </html>

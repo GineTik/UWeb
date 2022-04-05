@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UWeb - Главная</title>
+
+    <link rel="icon" href="img/logo.svg">
+
+    <link rel="stylesheet" href="../bootstrap-5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+
+    <header class="pt-md-4 pt-1">
+        <div class="container d-flex align-items-center">
+            <nav class="navbar navbar-light navbar-expand-md w-100">
+                <div class="navbar-brand logo me-5">
+                    <img src="../img/logo.svg">
+                </div>
+                <button class="navbar-toggler collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#toggleNavbar" aria-controls="toggleNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse w-100" id="toggleNavbar">
+                    <ul class="navbar-nav mt-md-0 mt-2 mb-md-0 mb-2">
+                        <div class="nav-item">
+                            <a class="nav-link" href="../index.html">главная</a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="nav-link" href="blog.html">блог</a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="nav-link active" href="">форум</a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="nav-link" href="lessons.html">обучение</a>
+                        </div>
+                    </ul>
+                    <div class="profile ms-auto">
+                        <a class="enter btn btn-link d-block d-md-inline mb-1" href="sign_in.html">вход</a>
+                        <a class="reg btn btn-primary d-block d-md-inline" href="">регистрация</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <main class="container">
+        <section class="articles">
+            <div class="sorting-tools">
+                <div class="sorting-by">
+                    <span>сортировка за</span>
+                    <select name="" id="" class="sorting-by__select form-select">
+                        <option value="">популяркостью(от высокой к низкой)</option>
+                        <option value="">популяркостью(от низкой к высокой)</option>
+                        <option value="">датой выхода(последние)</option>
+                        <option value="">датой выхода(первые)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="search mt-4">
+                <input type="text" class="form-control" placeholder="поиск...">
+                <button class="btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.677 19.607L12.962 13.891C10.4196 15.6985 6.91642 15.2564 4.90285 12.8739C2.88929 10.4915 3.03714 6.96361 5.24298 4.75802C7.44824 2.55147 10.9765 2.40298 13.3594 4.41644C15.7422 6.42989 16.1846 9.93347 14.377 12.476L20.092 18.192L18.678 19.606L18.677 19.607ZM9.48498 5.00001C7.58868 4.99958 5.95267 6.3307 5.56745 8.18745C5.18224 10.0442 6.15369 11.9163 7.89366 12.6703C9.63362 13.4242 11.6639 12.8529 12.7552 11.3021C13.8466 9.75129 13.699 7.64734 12.402 6.26402L13.007 6.86402L12.325 6.18402L12.313 6.17202C11.5648 5.4192 10.5464 4.99715 9.48498 5.00001Z" fill="#2E3A59"></path>
+                    </svg>  
+                </button>
+            </div>
+            <div class="articles__content mt-5">
+                <div class="article">
+                    <img class="article__img w-100" src="../img/article__img.png">
+                    <div class="article__header mt-3">
+                        <h2 class="article__title">Вот такой сайт я создал</h2>
+                        <div class="article__author">Denis Shevchuk</div>
+                        <div class="article__data">15.07.2021</div>
+                    </div>
+                    <div class="article__text my-2">Сегодня я создал очень крутой сайт на конструкторе UWeb. Получилось даже лучше чем я хотел и это 
+                        очень круто! Советую всем сделать свой сайт на бесплатном конструкторе  UWeb!!!!!!
+                        А теперь к главном, что за сайт и как я его сделал ...</div>
+                    <a href="#" class="link">перейти</a>
+                </div>
+                <div class="article">
+                    <img class="article__img w-100" src="../img/article__img.png">
+                    <div class="article__header mt-3">
+                        <h2 class="article__title">Вот такой сайт я создал</h2>
+                        <div class="article__author">Denis Shevchuk</div>
+                        <div class="article__data">15.07.2021</div>
+                    </div>
+                    <div class="article__text my-2">Сегодня я создал очень крутой сайт на конструкторе UWeb. Получилось даже лучше чем я хотел и это 
+                        очень круто! Советую всем сделать свой сайт на бесплатном конструкторе  UWeb!!!!!!
+                        А теперь к главном, что за сайт и как я его сделал ...</div>
+                    <a href="#" class="link">перейти</a>
+                </div>
+                <div class="article">
+                    <img class="article__img w-100" src="../img/article__img.png">
+                    <div class="article__header mt-3">
+                        <h2 class="article__title">Вот такой сайт я создал</h2>
+                        <div class="article__author">Denis Shevchuk</div>
+                        <div class="article__data">15.07.2021</div>
+                    </div>
+                    <div class="article__text my-2">Сегодня я создал очень крутой сайт на конструкторе UWeb. Получилось даже лучше чем я хотел и это 
+                        очень круто! Советую всем сделать свой сайт на бесплатном конструкторе  UWeb!!!!!!
+                        А теперь к главном, что за сайт и как я его сделал ...</div>
+                    <a href="#" class="link">перейти</a>
+                </div>
+                <div class="article">
+                    <img class="article__img w-100" src="../img/article__img.png">
+                    <div class="article__header mt-3">
+                        <h2 class="article__title">Вот такой сайт я создал</h2>
+                        <div class="article__author">Denis Shevchuk</div>
+                        <div class="article__data">15.07.2021</div>
+                    </div>
+                    <div class="article__text my-2">Сегодня я создал очень крутой сайт на конструкторе UWeb. Получилось даже лучше чем я хотел и это 
+                        очень круто! Советую всем сделать свой сайт на бесплатном конструкторе  UWeb!!!!!!
+                        А теперь к главном, что за сайт и как я его сделал ...</div>
+                    <a href="#" class="link">перейти</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="bg-primary pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col mb-md-0 mb-3 d-flex">
+                    <img src="../img/logo-white.svg" alt="UWeb">
+                    
+                    <div class="ms-3">
+                        <h2 class="mt-1">Email</h2>
+                        <p>support@uweb.com</p>
+                    </div>
+                </div>
+                <div class="col d-flex align-items-center justify-content-md-end justify-content-center">
+                    <a href="pages/projects.html" class="btn btn-secondary">створити сайт</a>
+                    <a href="pages/donate.html" class="btn btn-link ms-1">задонатіть</a>
+                </div>
+            </div>
+            <div class="row my-5">
+                <div class="col-md col-6 mb-md-0 mb-4 d-flex flex-column">
+                    <h3>Слудкуйте за нами</h3>
+                    <a href="#">facebook</a>
+                    <a href="#">twitter</a>
+                    <a href="#">instagram</a>
+                    <a href="#">youtube</a>
+                    <a href="#">lined in</a>
+                </div>
+                <div class="col-md col-6 mb-md-0 mb-4 d-flex flex-column">
+                    <h3>Навчення</h3>
+                    <a href="#">старт</a>
+                    <a href="#">базові знання</a>
+                    <a href="#">середній равень</a>
+                    <a href="#">продвинутий</a>
+                    <a href="#">повністю профі</a>
+                </div>
+                <div class="col-md col-6 d-flex flex-column">
+                    <h3>Блог</h3>
+                    <a href="#">про нас</a>
+                    <a href="#">все статі</a>
+                    <a href="#">сама остання</a>
+                </div>
+                <div class="col-md col-6 d-flex flex-column">
+                    <h3>Форум</h3>
+                    <a href="#">на головну форума</a>
+                    <a href="#">написати статю</a>
+                    <a href="#">перейти в свій профіль</a>
+                </div>
+                <div class="col-md col-12 mt-md-0 mt-4 d-flex flex-column">
+                    <h3>Зовнішні силка</h3>
+                    <a href="https://www.freepik.com/vectors/illustrations">freepik</a>
+                    <a href="#">силка 2</a>
+                    <a href="#">силка 3</a>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="d-flex flex-md-row flex-column justify-content-between">
+                <span class="text-center">сайт створений на конструкторі <b>UWeb</b></span>
+                <span class="text-md-end text-center mt-md-0 mt-2">Copyright © 2021 Усі права захищені<br>
+                    Managed by Web Depot FZE LLC.</span>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER -->
+
+    <!-- JS SCRIPTS -->
+    <script src="../bootstrap-5/js/bootstrap.bundle.min.js"></script>
+    <!-- JS SCRIPTS -->
+</body>
+</html>
